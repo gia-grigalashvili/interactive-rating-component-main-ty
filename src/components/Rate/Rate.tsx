@@ -2,7 +2,13 @@
 import "./Rate.css";
 import star from "/public/images/icon-star.svg";
 
-export default function Rate({ setSubmit, rate, setRate }) {
+type RateProps = {
+  setSubmit: (submit: boolean) => void;
+  rate: number | null;
+  setRate: (rate: number) => void;
+};
+
+export default function Rate({ setSubmit, rate, setRate }: RateProps) {
   let buttons: number[] = [1, 2, 3, 4, 5];
 
   return (
@@ -27,7 +33,7 @@ export default function Rate({ setSubmit, rate, setRate }) {
           </button>
         ))}
       </div>
-      <button className="sumbit" onClick={() => setSubmit(true)}>
+      <button className="submit" onClick={() => setSubmit(true)}>
         Submit
       </button>
     </div>
