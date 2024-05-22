@@ -1,8 +1,9 @@
+/* eslint-disable prefer-const */
 import "./Rate.css";
 import star from "/public/images/icon-star.svg";
 
 export default function Rate({ setsumbit, rate, setrate }) {
-  let buttons = [1, 2, 3, 4, 5];
+  let buttons: number[] = [1, 2, 3, 4, 5];
 
   return (
     <div className="conteiner">
