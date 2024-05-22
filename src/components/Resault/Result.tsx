@@ -1,7 +1,9 @@
 import "./Result.css";
 import star from "/public/images/illustration-thank-you.svg";
-
-export default function Result({ rate }) {
+type RateProps = {
+  rate: number | null;
+};
+export default function Result({ rate }: RateProps) {
   return (
     <div className="conteiner">
       <div className="images">
