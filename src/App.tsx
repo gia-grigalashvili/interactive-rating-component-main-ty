@@ -1,18 +1,18 @@
 import "./App.css";
-
 import { useState } from "react";
-import Result from "./components/Result";
-import Rate from "./components/Result";
+import Result from "./components/Resault/Result";
+import Rate from "./components/Rate/Rate";
 
 function App() {
-  const [rate, setrate] = useState(null);
-  const [sumbit, setsumbit] = useState(false);
+  const [rate, setRate] = useState<number | null>(null);
+  const [submit, setSubmit] = useState<boolean>(false);
+
   return (
     <>
-      {sumbit ? (
+      {submit ? (
         <Result rate={rate} />
       ) : (
-        <Rate rate={rate} setrate={setrate} setsumbit={setsumbit} />
+        <Rate rate={rate} setRate={setRate} setSubmit={setSubmit} />
       )}
     </>
   );

@@ -2,15 +2,14 @@
 import "./Rate.css";
 import star from "/public/images/icon-star.svg";
 
-export default function Rate({ setsumbit, rate, setrate }) {
+export default function Rate({ setSubmit, rate, setRate }) {
   let buttons: number[] = [1, 2, 3, 4, 5];
 
   return (
     <div className="conteiner">
-      <div className="imgs">
-        <img src={star} alt="" />
+      <div className="images">
+        <img src={star} alt="Star Icon" />
       </div>
-
       <h1>How did we do?</h1>
       <p>
         Please let us know how we did with your support request. All feedback is
@@ -20,16 +19,16 @@ export default function Rate({ setsumbit, rate, setrate }) {
         {buttons.map((button) => (
           <button
             className="rate"
-            onClick={() => setrate(button)}
+            onClick={() => setRate(button)}
             key={button}
-            style={rate == button ? { backgroundColor: "yellow" } : {}}
+            style={rate === button ? { backgroundColor: "yellow" } : {}}
           >
             {button}
           </button>
         ))}
       </div>
-      <button className="sumbit" onClick={() => setsumbit(true)}>
-        sumbit
+      <button className="sumbit" onClick={() => setSubmit(true)}>
+        Submit
       </button>
     </div>
   );

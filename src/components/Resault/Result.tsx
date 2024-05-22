@@ -1,15 +1,13 @@
-import "./result.css";
+import "./Result.css";
 import star from "/public/images/illustration-thank-you.svg";
 
 export default function Result({ rate }) {
   return (
     <div className="conteiner">
-      <div className="imges">
-        {" "}
-        <img src={star} alt="" />
+      <div className="images">
+        <img src={star} alt="Thank You" />
       </div>
-
-      <div className="text ">
+      <div className="text">
         <h2>You selected {rate} out of 5</h2>
       </div>
       <h1>Thank you!</h1>
